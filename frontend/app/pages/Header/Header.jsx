@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { images } from "../../constants";
 import "./Header.scss";
 import Image from "next/image";
+import { AppWrap } from '../../wrapper';
 
 const scaleVariants = {
   whileInView: {
@@ -15,8 +16,8 @@ const scaleVariants = {
   },
 };
 
-const Header = () => {
-  return (
+const Header = () => ( 
+
     <div className="app__header app__flex">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -67,7 +68,7 @@ const Header = () => {
         ))}
       </motion.div>
     </div>
-  );
-};
 
-export default Header;
+);
+
+export default AppWrap(Header, 'home');

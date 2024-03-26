@@ -1,11 +1,10 @@
-'use client'
+'use client' 
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import './About.scss'
-import { urlFor } from '../../client'; // Only import urlFor, not the entire client
-import { client } from '../../client'; // Import the Sanity client
+import { client, urlFor } from '../../client'; // Import client and urlFor
+import { AppWrap, MotionWrap } from '../../wrapper';
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -17,6 +16,7 @@ const About = () => {
       setAbouts(data);
     });
   }, []);
+
   return (
     <>
       <h2 className="head-text">I Know that <span>Good Apps</span><br />means <span>Good Business</span></h2>
@@ -40,4 +40,8 @@ const About = () => {
   );
 };
 
-export default About;
+export default AppWrap(
+  MotionWrap(About, 'app__about'),
+  'about',
+  'app__whitebg',
+);
