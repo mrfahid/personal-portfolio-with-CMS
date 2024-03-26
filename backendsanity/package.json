@@ -1,5 +1,5 @@
 {
-  "name": "personal-portfolio",
+  "name": "backendsanity",
   "private": true,
   "version": "1.0.0",
   "main": "package.json",
@@ -15,7 +15,6 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/cli": "^3.35.2",
     "@sanity/vision": "^3.35.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
