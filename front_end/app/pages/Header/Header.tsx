@@ -16,6 +16,8 @@ const scaleVariants = {
   },
 };
 
+
+
 const Header = () => ( 
 
     <div className="app__header app__flex">
@@ -45,14 +47,24 @@ const Header = () => (
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
     >
-      <Image src={images.profile} alt="profile_bg" />
+      <Image 
+      src={images.profile_bg2}
+       alt="profile_bg2" 
+       layout="responsive"
+       priority
+       />
       <motion.div
         whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1, ease: 'easeInOut' }}
-        alt="profile_circle"
         className="overlay_circle"
       > 
-      <Image src={images.circle} className="animatedCircle" alt="profile_circle" />
+      <Image 
+      src={images.circle} 
+      className="animatedCircle" 
+      alt="profile_circle" 
+      layout="responsive"
+      priority
+      />
       </motion.div>
     </motion.div>
 
@@ -70,5 +82,9 @@ const Header = () => (
     </div>
 
 );
+
+
+
+// const WrappedHeader = () => <AppWrap Component={Header} idName='home' />;
 
 export default AppWrap(Header, 'home');
