@@ -1,5 +1,6 @@
 import { defineConfig } from "sanity";
-import deskTool from "@sanity/desk";
+import {structureTool} from 'sanity/structure'
+import {visionTool} from '@sanity/vision'
 
 const config = defineConfig({
   projectId: 'k21eb9nx',
@@ -7,7 +8,7 @@ const config = defineConfig({
   title: "My Personal Portfolio",
   apiVersion: "2024-03-26",
   basePath: "/admin",
-  plugins: [deskTool],
+  plugins: [structureTool(), visionTool()],
 });
 
 export default config;

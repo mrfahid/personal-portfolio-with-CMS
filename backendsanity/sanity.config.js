@@ -6,7 +6,7 @@ import {deskTool} from 'sanity/desk'
 
 export default defineConfig({
   name: 'default',
-  title: 'backend_sanity',
+  title: 'backend_sanity', 
 
   projectId: 'k21eb9nx',
   dataset: 'production',
