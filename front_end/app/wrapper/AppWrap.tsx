@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationDots, SocialMedia } from '../components';
 
-const AppWrap = (Component : any, idName: string, classNames: string) => function HOC() {
+const AppWrap = (Component : any, idName: string, classNames: string) => (function HOC() {
   return (
     <div id={idName} className={`app__container ${classNames}`}>
       <SocialMedia />
@@ -16,6 +16,6 @@ const AppWrap = (Component : any, idName: string, classNames: string) => functio
       <NavigationDots active={idName} />
     </div>
   );
-};
+});
 
 export default AppWrap;
