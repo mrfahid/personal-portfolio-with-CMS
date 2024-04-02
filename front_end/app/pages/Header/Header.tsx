@@ -48,7 +48,7 @@ const Header = () => (
       className="app__header-img"
     >
       <Image 
-      src={images.profile_bg2}
+      src={images.profile}
        alt="profile_bg2" 
        layout="responsive"
        priority

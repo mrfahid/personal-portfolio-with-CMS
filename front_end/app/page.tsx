@@ -1,19 +1,22 @@
+import React from 'react';
 import { Navbar } from "./components";
-import './App.scss'
-import { About, Header, Work } from "./pages";
+import { About, Header, Work, Skills, Testimonial } from "./pages";
+import './App.scss'; // Import the SCSS file
 
 export default function Home() {
   return (
     <div className="app">
-    <Navbar />
-    <Header />
-    <About />
-    <Work />
-    {/* 
-    <About />
-    <Skills />
-    <Testimonial />
-    <Footer /> */}
-  </div>
+      <Navbar />
+      <Header />
+      <About />
+      <Work />
+      <Skills />
+      <Testimonial />
+      {/* 
+      <About />
+      
+      <Footer />
+      */}
+    </div>
   );
 }
