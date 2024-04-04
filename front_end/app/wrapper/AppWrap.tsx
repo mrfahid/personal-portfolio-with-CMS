@@ -9,7 +9,7 @@ const AppWrap = (Component : any, idName: string, classNames: string) => (functi
         <Component />
 
         <div className="copyright">
-          <p className="p-text">@2020 MICHAEL</p>
+          <p className="p-text">@2024 Shah Fahid</p>
           <p className="p-text">All rights reserved</p>
         </div>
       </div>

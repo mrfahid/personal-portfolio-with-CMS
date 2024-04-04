@@ -23,14 +23,14 @@ export interface skills {
 }
 
 export interface barnds {
-  _id : string,
+  _id : any,
   name: string,
   imgUrl: string,
 }
 
 export interface testimonials {
   name: string,
-  imgUrl: string,
+  imgurl: string,
   company: string,
   feedback: string,
 }

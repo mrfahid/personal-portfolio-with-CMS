@@ -65,7 +65,7 @@
   }
 
   h4 {
-    font-weight: 400;
+    font-weight: 600;
     color: var(--secondary-color);
     margin-top: 2rem;
   }
@@ -90,34 +90,33 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    color: var(--secondary-color);
+    background-color: var(--white-color);
 
     margin: 1rem;
     transition: all 0.3s ease-in-out;
-  }
-
-  svg {
-    width: 20px;
-    height: 20px;
-    color: var(--secondary-color);
-  }
-
-  &:hover {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
 
     svg {
-      color: var(--white-color);
+      width: 20px;
+      height: 20px;
+      color: var(--secondary-color);
     }
-  }
 
-  @media screen and (min-width: 2000px) {
-    width: 100px;
-    height: 100px;
+    &:hover {
+      background-color: var(--secondary-color);
 
-    svg {
-      width: 45px;
-      height: 45px;
+      svg {
+        color: var(--white-color);
+      }
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 100px;
+      height: 100px;
+
+      svg {
+        width: 45px;
+        height: 45px;
+      }
     }
   }
 }

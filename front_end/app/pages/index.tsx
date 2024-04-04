@@ -7,3 +7,5 @@ export { default as Work} from './Work/page'
 export { default as Skills } from './Skills/Skills'
 
 export { default as Testimonial } from './Testimonial/Testimonial'
+
+export { default as Footer } from './Footer/Footer'

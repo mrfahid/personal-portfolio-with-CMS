@@ -59,6 +59,12 @@
   justify-content: flex-end;
   flex-direction: column;
 
+  .head-text {
+    color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--secondary-color);
+  }
   .badge-cmp,
   .tag-cmp {
     padding: 1rem 2rem;

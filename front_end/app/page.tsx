@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar } from "./components";
-import { About, Header, Work, Skills, Testimonial } from "./pages";
+import { About, Header, Work, Skills, Testimonial, Footer } from "./pages";
 import './App.scss'; // Import the SCSS file
 
 export default function Home() {
@@ -12,11 +12,7 @@ export default function Home() {
       <Work />
       <Skills />
       <Testimonial />
-      {/* 
-      <About />
-      
       <Footer />
-      */}
     </div>
   );
 }

@@ -5,13 +5,14 @@ import { images } from "../../constants";
 import { motion } from "framer-motion";
 import "./Navbar.scss";
 import Image from "next/image";
+import { ModeToggle } from "../ModeToggle";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <Image src={images.logo3} alt="logo" className="logo"/>
+        <h2>Shah <span>Fahid</span></h2>
       </div>
       <ul className="app__navbar-links">
         {["home", "about", "work", "skills", "contact"].map((item) => (
@@ -43,6 +44,8 @@ const Navbar = () => {
           </motion.div>
         )}
       </div>
+      <ModeToggle/> 
+
     </nav>
   );
 };
