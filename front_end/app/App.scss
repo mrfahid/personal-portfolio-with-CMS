@@ -1,8 +1,15 @@
+
 .app {
     background-color: var(--primary-color);
     font-family: var(--font-base);
   }
   
+  /* Dark Mode Styles */
+.dark-theme {
+  background-color: #1a1a1a; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
 
   .app__whitebg {
     background-color: var(--white-color);

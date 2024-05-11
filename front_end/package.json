@@ -18,7 +18,7 @@
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.36.2",
     "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.0",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.0.23",
     "lucide-react": "^0.364.0",
     "next": "^14.1.4",
@@ -32,7 +32,7 @@
     "react-tooltip": "^5.26.3",
     "sanity": "^3.36.2",
     "sass": "^1.72.0",
-    "tailwind-merge": "^2.2.2",
+    "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
