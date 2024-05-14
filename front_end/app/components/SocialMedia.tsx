@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { BsInstagram, BsLinkedin } from 'react-icons/bs';
 // import { FaFacebookF } from 'react-icons/fa';
@@ -11,9 +12,9 @@ interface SocialMediaProps {
 
 const SocialMedia: React.FC<SocialMediaProps> = () => (
   <div className="app__social">
-    <div>
+    <a href='https://github.com/mrfahid' target='_blank'>
       <BsLinkedin />
-    </div>
+    </a>
     <div>
       <FaGithub />
     </div>

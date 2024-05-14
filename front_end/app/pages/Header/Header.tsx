@@ -30,14 +30,14 @@ const Header = () => (
           <div className="badge-cmp app__flex">
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hello, I am</p>
+              <p className="p-text dark:text-black">Hello, I am</p>
               <h1 className="head-text">Fahid</h1>
             </div>
           </div>
 
           <div className="tag-cmp app__flex">
-            <p className="p-text">Web Developer</p>
-            <p className="p-text">Frontend</p>
+            <p className="p-text dark:text-black">Web Developer</p>
+            <p className="p-text dark:text-black">Frontend</p>
           </div>
         </div>
       </motion.div>
@@ -48,7 +48,7 @@ const Header = () => (
       className="app__header-img"
     >
       <Image 
-      src={images.profile}
+       src={images.logo4}
        alt="profile_bg2" 
        layout="responsive"
        priority

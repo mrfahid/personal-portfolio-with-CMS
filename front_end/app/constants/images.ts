@@ -37,6 +37,8 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import profile_bg2 from '../assets/profile_bg2.png'
 
+import logo4 from '../assets/logo4.png';
+
 export default {
   email,
   mobile,
@@ -72,5 +74,6 @@ export default {
   skype,
   spotify,
   logo3,
-  profile_bg2
+  profile_bg2,
+  logo4
 };

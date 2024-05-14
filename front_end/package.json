@@ -19,6 +19,7 @@
     "@sanity/vision": "^3.36.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "dialogflow": "^1.2.0",
     "framer-motion": "^11.0.23",
     "lucide-react": "^0.364.0",
     "next": "^14.1.4",
@@ -27,7 +28,8 @@
     "punycode": "^2.3.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^5.0.1",
+    "react-icons": "^5.2.1",
+    "react-iframe": "^1.8.5",
     "react-redux": "^9.1.0",
     "react-tooltip": "^5.26.3",
     "sanity": "^3.36.2",
@@ -36,6 +38,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/dialogflow": "^4.0.4",
     "@types/node": "^20",
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18",

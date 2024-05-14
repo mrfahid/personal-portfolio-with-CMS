@@ -3,6 +3,7 @@ import { Navbar } from "./components";
 import { About, Header, Work, Skills, Testimonial, Footer } from "./pages";
 import './App.scss'; // Import the SCSS file
 import { ThemeProvider } from './components/ThemeProvider';
+import ChatInterface from './pages/ChatInterface/ChatInterface';
 
 
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Work />
       <Skills />
       <Testimonial />
+      <ChatInterface />
       <Footer />
       </ThemeProvider>
     </div>
