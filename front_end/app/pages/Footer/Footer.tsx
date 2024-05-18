@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { images } from "../../constants";
 import { client } from "../../client";
@@ -8,8 +8,14 @@ import Image from "next/image";
 import "./Footer.scss";
 import Link from "next/link";
 
-const Footer = () => {
-  const [formData, setFormData] = useState({
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const Footer: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
@@ -17,9 +23,9 @@ const Footer = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const { username, email, message } = formData;
+  const { name, email, message } = formData;
 
-  const handleChangeInput = (e: any) => {
+  const handleChangeInput = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -30,7 +36,7 @@ const Footer = () => {
 
     const contact = {
       _type: "contact",
-      name: username,
+      name,
       email,
       message,
     };
@@ -70,8 +76,8 @@ const Footer = () => {
               className="p-text"
               type="text"
               placeholder="Your Name"
-              name="username"
-              value={username}
+              name="name"
+              value={name}
               onChange={handleChangeInput}
             />
           </div>

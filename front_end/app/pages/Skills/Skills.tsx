@@ -8,11 +8,11 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Skills.scss";
 import Image from "next/image";
-import { experimenting, skills } from "@/app/types";
+import { Experimenting, skills as SkillsType } from "@/app/types";
 
 const Skills = () => {
-  const [experiences, setExperiences] = useState<experimenting[]>([]);
-  const [skills, setSkills] = useState<skills[]>([]);
+  const [experiences, setExperiences] = useState<Experimenting[]>([]);
+  const [skills, setSkills] = useState<SkillsType[]>([]);
 
   useEffect(() => {
     const query = `*[_type == 'experiences']`;
@@ -27,6 +27,7 @@ const Skills = () => {
       console.log(data);
     });
   }, []);
+
   return (
     <>
       <h2 className="head-text">Skills & Experiences</h2>
@@ -42,7 +43,7 @@ const Skills = () => {
             >
               <div className="app__flex">
                 <Image
-                  src={urlFor(skill.icon)}
+                  src={urlFor(skill.icon)} // Updated here
                   alt={skill.name}
                   width={200}
                   height={100}
@@ -53,37 +54,32 @@ const Skills = () => {
           ))}
         </motion.div>
 
-        <div className="app-skills-exp-works">
-          {experiences.map((experiences: experimenting) => (
-            <motion.div key={experiences.year} className="app__skills-exp-item">
+        <div className="app__skills-exp-works">
+          {experiences.map((experience) => (
+            <motion.div key={experience.year} className="app__skills-exp-item">
               <div className="app__skills-exp-year">
-                <p className="bold-text">{experiences.year}</p>
+                <p className="bold-text">{experience.year}</p>
               </div>
               <motion.div className="app__skills-exp-work">
-                {experiences.works.map((work: any) => (
-                  <>
+                {experience.works.map((work) => (
+                  <div key={work.name}>
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="app__skills"
-                      data-tip
-                      data-for={work.name}
-                      key={work.name}
+                      data-tooltip-id={work.name}
+                      data-tooltip-content={work.desc}
                     >
                       <h4 className="bold-text">{work.name}</h4>
-                      <p className="p-text"
-                      >{work.company}</p>
+                      <p className="p-text">{work.company}</p>
                       <p>{work.desc}</p>
                     </motion.div>
                     <Tooltip
                       id={work.name}
-                      effect="solid"
                       arrowColor="#fff"
                       className="skills-tooltip"
-                    >
-                      {work.desc}
-                    </Tooltip>
-                  </>
+                    />
+                  </div>
                 ))}
               </motion.div>
             </motion.div>

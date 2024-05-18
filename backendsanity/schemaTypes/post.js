@@ -22,6 +22,19 @@ export default {
       },
     },
     {
+      name: 'titleImage',
+      type: 'image',
+      title: 'Title Image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'smallDescription',
+      type:'string',
+      title: 'Small Description',
+    },
+    {
       name: 'content',
       type: 'array',
       title: 'Content',

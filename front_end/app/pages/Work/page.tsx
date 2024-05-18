@@ -7,7 +7,7 @@ import "./work.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
-import { Work } from "@/app/types";
+import type { Work } from "@/app/types";
 
 
 const Work =  () => {
@@ -27,10 +27,10 @@ const Work =  () => {
 
   const handleWorkFilter = (item: string) => {
     setActiveFilter(item);
-    setAnimateCard([{ y: 100, opacity: 0 }]);
+    setAnimateCard({ y: 100, opacity: 0 }); 
 
     setTimeout(() => {
-      setAnimateCard([{ y: 0, opacity: 1 }]);
+      setAnimateCard({ y: 0, opacity: 1 });
 
       if (item === 'All') {
         setFilterWork(works);

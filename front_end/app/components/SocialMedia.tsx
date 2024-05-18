@@ -12,15 +12,15 @@ interface SocialMediaProps {
 
 const SocialMedia: React.FC<SocialMediaProps> = () => (
   <div className="app__social">
-    <a href='https://github.com/mrfahid' target='_blank'>
-      <BsLinkedin />
-    </a>
-    <div>
-      <FaGithub />
-    </div>
-    <div>
-      <BsInstagram />
-    </div>
+    <Link className="mb-5 " href='https://www.linkedin.com/in/shah-fahid-a4543027b/' target='_blank'>
+      <BsLinkedin className=" hover:bg-blue-700"/>
+    </Link>
+    <Link className="hover:bg-black-800" href='https://github.com/mrfahid' target="_blank">
+      <FaGithub className="hover:bg-slate-400"/>
+    </Link>
+    <Link className="mt-5" href="https://www.instagram.com/mr_fahid.dev/" target="_blank">
+      <BsInstagram className="hover:bg-red-400"/>
+    </Link>
   </div>
 );
 

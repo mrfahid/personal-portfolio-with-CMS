@@ -1,29 +1,27 @@
-'use client'
+"use client"
 
 import React, { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
-import { images } from "../../constants";
 import { motion } from "framer-motion";
 import "./Navbar.scss";
-import Image from "next/image";
 import { ModeToggle } from "../ModeToggle";
 import Link from "next/link";
 
-interface blog {
+interface BlogLinkProps {
   title: string;
   url: string;
 }
+
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
-  const blog: blog = {
-    title: "Blog",
-    url: "/Blog",
-  }
+
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <h2>Shah <span>Fahid</span></h2>
+        <h2>
+          Shah <span>Fahid</span>
+        </h2>
       </div>
       <ul className="app__navbar-links dark:text-gray-800">
         {["home", "about", "work", "skills", "contact"].map((item) => (
@@ -32,6 +30,7 @@ const Navbar = () => {
             <a href={`#${item}`}>{item}</a>
           </li>
         ))}
+        <Link href={`https://google.com`}>blog</Link> 
       </ul>
 
       <div className="app__navbar-menu dark:text-gray-800">
@@ -45,22 +44,20 @@ const Navbar = () => {
             <HiX onClick={() => setToggle(false)} />
             <ul className="dark:text-gray-800">
               {["home", "about", "work", "skills", "contact"].map((item) => (
-                <>
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setToggle(false)}>
                     {item}
                   </a>
                 </li>
-                </>
               ))}
             </ul>
           </motion.div>
         )}
       </div>
-      <ModeToggle/> 
-
+      <ModeToggle />
     </nav>
   );
 };
+
 
 export default Navbar;

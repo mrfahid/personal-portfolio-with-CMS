@@ -8,12 +8,13 @@ export interface Work {
   description: string; // Assuming description is a string
 }
 
-export interface experimenting{
-  year: number,
-  work: string,
-  description: string,
-  imgUrl: string,
-  works: any,
+export interface Experimenting {
+  year: number;
+  works: {
+    name: string;
+    company: string;
+    desc: string;
+  }[];
 }
 
 export interface skills {

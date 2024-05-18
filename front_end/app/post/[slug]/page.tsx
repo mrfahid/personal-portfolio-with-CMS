@@ -1,3 +1,5 @@
+// post/[slug]/page.tsx
+
 import { client, urlFor } from "@/app/client";
 import { Post } from "@/app/lib/interface";
 import { PortableText } from "@portabletext/react";
@@ -7,9 +9,14 @@ import Image from "next/image";
 async function getData(slug: string) {
   const query = `*[_type == "post" && slug.current == "${slug}"][0]`;
 
-  const data = await client.fetch(query);
-
-  return data;
+  try {
+    const data = await client.fetch(query);
+    console.log("Fetched data:", data); // Add this for debugging
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return null;
+  }
 }
 
 export default async function SlugPage({
@@ -17,13 +24,19 @@ export default async function SlugPage({
 }: {
   params: { slug: string };
 }) {
+  console.log("Slug:", params.slug); // Add this for debugging
+
   const data = (await getData(params.slug)) as Post;
+
+  if (!data) {
+    return <div>Error fetching data</div>; // Handle data fetching error
+  }
 
   const PortableTextComponent = {
     types: {
       image: ({ value }: { value: any }) => (
         <Image
-          src={urlFor(value).url()}
+          src={urlFor(value)}
           alt="Image"
           className="rounded-lg"
           width={800}
@@ -32,7 +45,6 @@ export default async function SlugPage({
       ),
     },
   };
-
   return (
     <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
       <header className="pt-6 xl:pb-6">
