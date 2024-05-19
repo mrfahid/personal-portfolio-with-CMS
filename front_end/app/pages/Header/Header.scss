@@ -112,6 +112,14 @@
   &:hover Image {
     transform: scale(1.1);
   }
+
+
+  @media screen and (max-width: 950px) {
+   .animatedCircle {
+    width: 80%;
+    height: 80%;
+   }
+  }
 }
 
 
@@ -213,3 +221,11 @@
   }
 }
 
+
+
+@media screen and (max-width: 780px) {
+  .image-profile {
+    width: 400px;
+    height: 400px;
+  }
+}

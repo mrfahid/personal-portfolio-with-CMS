@@ -25,18 +25,25 @@ const Navbar = () => {
       </div>
       <ul className="app__navbar-links dark:text-gray-800">
         {["home", "about", "work", "skills", "contact"].map((item) => (
+
           <li key={item} className="app__flex p-text">
             <div />
             <a href={`#${item}`}>{item}</a>
+
           </li>
+
         ))}
-        <Link href={`https://google.com`}>blog</Link> 
+          <li>
+            <Link href={`https://blogs-site-vert.vercel.app/`} target="_blank" className="dark:text-gray-800 mt-8">Blog</Link> 
+          </li>
+          
       </ul>
 
       <div className="app__navbar-menu dark:text-gray-800">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
         {toggle && (
+          
           <motion.div
             whileInView={{ x: [300, 0] }}
             transition={{ duration: 0.85, ease: "easeOut" }}
@@ -50,11 +57,17 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
+              <li>
+                <ModeToggle />
+              </li>
             </ul>
           </motion.div>
+           
         )}
       </div>
+      <div className="toggle">
       <ModeToggle />
+      </div>
     </nav>
   );
 };

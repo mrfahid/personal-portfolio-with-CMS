@@ -33,8 +33,8 @@ const Header = () => (
         </div>
 
         <div className="tag-cmp app__flex">
-          <p className="p-text dark:text-black">Web Developer</p>
           <p className="p-text dark:text-black">Frontend</p>
+          <p className="p-text dark:text-black">Web Developer</p>
         </div>
       </div>
     </motion.div>
@@ -49,6 +49,7 @@ const Header = () => (
        alt="profile_bg2" 
        layout="responsive"
        priority
+       className="image-profile"
        />
       <motion.div
         whileInView={{ scale: [0, 1] }}
@@ -57,7 +58,7 @@ const Header = () => (
       > 
       <Image 
       src={images.circle} 
-      className="animatedCircle" 
+      className="animatedCircle w-[300px] h-[500px] md:w-[500px] md:h-[500px" 
       alt="profile_circle" 
       layout="responsive"
       priority
