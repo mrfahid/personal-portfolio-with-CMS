@@ -80,4 +80,4 @@ const Header = () => (
   </div>
 );
 
-export default AppWrap(Header, 'home', 'app__whitebg');
+export default AppWrap(Header, 'home', `app__whitebg`);
