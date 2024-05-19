@@ -31,7 +31,7 @@ const About: React.FC<{}> = () => {
 
   return (
     <>
-      <h2 className="head-text">
+      <h2 className="head-text dark:text-white">
         I Know that <span>Good Apps</span>
         <br />
         means <span>Good Business</span>

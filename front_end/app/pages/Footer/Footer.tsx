@@ -55,10 +55,10 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <h2 className="head-text">Take a Chai & chat with me</h2>
+      <h2 className="head-text dark:text-white">Take a Chai & chat with me</h2>
 
       <div className="app__footer-cards">
-        <div className="app__footer-card">
+        <div className="app__footer-card ">
           <Image src={images.email} alt="email"/>
           <Link href="mailto:shahfahidbaloch@gmail.com" className="p-text" target="_blank">
             shahfahidbaloch@gmail.com

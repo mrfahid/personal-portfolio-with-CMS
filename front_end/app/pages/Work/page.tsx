@@ -41,7 +41,7 @@ const Work =  () => {
   };
   return (
     <>
-      <h2 className="head-text">
+      <h2 className="head-text dark:text-white">
         My Creative <span>Portfolio</span> Section
       </h2>
 
