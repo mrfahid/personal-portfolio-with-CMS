@@ -19,7 +19,7 @@
     "@sanity/vision": "^3.36.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "dialogflow": "^1.2.0",
+    "dialogflow": "^4.0.3",
     "dotenv": "^16.4.5",
     "framer-motion": "^11.0.23",
     "lucide-react": "^0.364.0",
