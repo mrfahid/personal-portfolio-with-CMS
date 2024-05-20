@@ -14,20 +14,22 @@
   cursor: pointer;
 }
 
-.portfolioContainer {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  width: 350px;
-  height: 430px;
-  transform: translateY(-50%);
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  display: none; /* Initially hidden */
-  z-index: 1000; /* Ensure it's above other content */
+.chatbotIframe {
+  border-radius: 15px; 
+  overflow: hidden; 
 }
 
 .show {
   display: block; /* Show when toggled */
 }
 
+@media screen and (max-width: 768px) {
+  
+  .container {
+    bottom: 5%;
+    right: 20px;
+    transform: translateX(0%);
+    z-index: 100;
+  }
+
+}

@@ -39,8 +39,7 @@ const Navbar = () => {
       </ul>
 
       <div className="app__navbar-menu dark:text-gray-800">
-        <HiMenuAlt4 onClick={() => setToggle(true)} />
-
+        {!toggle && <HiMenuAlt4 onClick={() => setToggle(true)} />}
         {toggle && (
           <motion.div
             whileInView={{ x: [300, 0] }}

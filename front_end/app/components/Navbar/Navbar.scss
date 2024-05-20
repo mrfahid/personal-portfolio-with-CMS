@@ -1,13 +1,10 @@
 .app__navbar {
   width: 100%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.25);
-  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -20,22 +17,13 @@
   justify-content: flex-start;
   align-items: center;
 
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: black;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 0.9px;
-    -webkit-text-stroke-color: black;
-    span {
-      color: black;
-      -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: var(--secondary-color);
-    }
+  img {
+    width: 90px;
+    height: 20px;
 
     @media screen and (min-width: 2000px) {
-      font-size: 2rem;
+      width: 180px;
+      height: 40px;
     }
   }
 }
@@ -45,13 +33,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   list-style: none;
 
   li {
     margin: 0 1rem;
     cursor: pointer;
-
     flex-direction: column;
 
     div {
@@ -59,7 +45,6 @@
       height: 5px;
       background: transparent;
       border-radius: 50%;
-
       margin-bottom: 5px;
     }
 
@@ -67,10 +52,8 @@
       color: var(--gray-color);
       text-decoration: none;
       flex-direction: column;
-
       text-transform: uppercase;
       font-weight: 500;
-
       transition: all 0.3s ease-in-out;
 
       &:hover {
@@ -95,16 +78,17 @@
   height: 35px;
   border-radius: 50%;
   position: relative;
-
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-color);
+  z-index: 10; // Ensure this has a higher z-index than the menu div
 
   svg {
     width: 70%;
     height: 70%;
     color: var(--white-color);
+    cursor: pointer;
   }
 
   div {
@@ -112,31 +96,28 @@
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: 100;
+    z-index: -9; // This should be lower than the svg icon
 
     padding: 1rem;
-
     width: 80%;
     height: 100vh;
-
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-
     background: url("../../assets/bgWhite.png");
     background-color: var(--white-color);
     background-size: cover;
     background-repeat: repeat;
-
-    /* top box shadow */
     box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
 
     svg {
       width: 35px;
+      cursor: pointer;
       height: 35px;
       color: var(--secondary-color);
       margin: 0.5rem 1rem;
+      z-index: 11; // Ensure this has the highest z-index
     }
 
     ul {
@@ -145,7 +126,6 @@
       padding: 0;
       height: 100%;
       width: 100%;
-
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
@@ -160,7 +140,6 @@
           font-size: 1rem;
           text-transform: uppercase;
           font-weight: 500;
-
           transition: all 0.3s ease-in-out;
 
           &:hover {
@@ -180,7 +159,7 @@
   }
 }
 
-@media screen and (max-width: 920px ) {
+@media screen and (max-width: 900px) {
   .toggle {
     display: none;
   }
