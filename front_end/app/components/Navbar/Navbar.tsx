@@ -29,7 +29,7 @@ const Navbar = () => {
         <li key="blog" className="app__flex p-text">
           <div />
           <Link
-            href={`https://blogs-site-vert.vercel.app/`}
+            href={`https://fahid-blogs.vercel.app/`}
             target="_blank"
             className="dark:text-gray-800 text-center font-bold"
           >
@@ -57,7 +57,7 @@ const Navbar = () => {
               <li key="blog" className="app__flex p-text">
                 <div />
                 <Link
-                  href={`https://blogs-site-vert.vercel.app/`}
+                  href={`https://fahid-blogs.vercel.app/`}
                   target="_blank"
                   className="dark:text-gray-800 text-center font-bold"
                 >
