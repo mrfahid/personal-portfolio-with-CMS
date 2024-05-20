@@ -7,6 +7,8 @@ import { client } from "../../client";
 import Image from "next/image";
 import "./Footer.scss";
 import Link from "next/link";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 interface FormData {
   name: string;
@@ -31,7 +33,6 @@ const Footer: React.FC = () => {
   };
 
   const handleSubmit = () => {
-    console.log(formData); // Add this line to check formData before making the API call
     setLoading(true);
 
     const contact = {
@@ -46,20 +47,23 @@ const Footer: React.FC = () => {
       .then(() => {
         setLoading(false);
         setIsFormSubmitted(true);
+        toast.success("Message sent successfully!");
       })
       .catch((err) => {
         setLoading(false);
-        console.log(err);
+        console.error("Error sending message:", err);
+        toast.error("Failed to send message.");
       });
   };
 
   return (
     <>
+      <ToastContainer />
       <h2 className="head-text dark:text-white">Take a Chai & chat with me</h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
-          <Image src={images.email} alt="email"/>
+          <Image src={images.email} alt="email" />
           <Link href="mailto:shahfahidbaloch@gmail.com" className="p-text" target="_blank">
             shahfahidbaloch@gmail.com
           </Link>
@@ -79,6 +83,7 @@ const Footer: React.FC = () => {
               name="name"
               value={name}
               onChange={handleChangeInput}
+              style={{ borderColor: name === "" ? "red" : undefined }}
             />
           </div>
           <div className="app__flex">
@@ -89,6 +94,7 @@ const Footer: React.FC = () => {
               name="email"
               value={email}
               onChange={handleChangeInput}
+              style={{ borderColor: email === "" ? "red" : undefined }}
             />
           </div>
           <div>
@@ -98,6 +104,7 @@ const Footer: React.FC = () => {
               value={message}
               name="message"
               onChange={handleChangeInput}
+              style={{ borderColor: message === "" ? "red" : undefined }}
             />
           </div>
           <button type="button" className="p-text" onClick={handleSubmit}>

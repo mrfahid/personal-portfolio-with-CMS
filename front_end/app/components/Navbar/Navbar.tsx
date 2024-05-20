@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <h2>
+        <h2 className="head-text">
           Shah <span>Fahid</span>
         </h2>
       </div>

@@ -16,6 +16,19 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  
+  .head-text {
+    font-size: 1.5em;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  }
+  
+ .head-text span {
+    color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--secondary-color);
+  }
 
   img {
     width: 90px;
@@ -164,3 +177,6 @@
     display: none;
   }
 }
+
+
+
