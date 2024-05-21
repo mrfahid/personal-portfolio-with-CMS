@@ -35,12 +35,13 @@ const Testimonial = () => {
     <>
       {testimonials.length && (
         <>
-          <div className="app__testimonial-item app__flex">
+          <div className="app__testimonial-item app__flex dark:bg-zinc-200">
             <Image
               src={urlFor(testimonials[currentIndex].imgurl)}
               alt="testimonials-images"
               width={200}
               height={100}
+              priority
             />
             <div className="app__testimonial-content">
               <p className="p-text">{testimonials[currentIndex].feedback}</p>
@@ -79,7 +80,7 @@ const Testimonial = () => {
         </>
       )}
 
-      <div className="app__testimonial-brands app__flex">
+      <div className="app__testimonial-brands app__flex ">
         {brands.map((brand) => (
           <motion.div
           whileInView={{ opacity: [0, 1] }} 
@@ -91,6 +92,7 @@ const Testimonial = () => {
               width={200}
               height={100}
               alt={brand.name}
+              className="dark:bg-zinc-200 p-4 rounded-xl cursor-pointer"
             />
           </motion.div>
         ))}

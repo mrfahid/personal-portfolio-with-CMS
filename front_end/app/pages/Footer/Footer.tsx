@@ -64,11 +64,11 @@ const Footer: React.FC = () => {
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <Image src={images.email} alt="email" />
-          <Link href="mailto:shahfahidbaloch@gmail.com" className="p-text" target="_blank">
+          <Link href="mailto:shahfahidbaloch@gmail.com" className="p-text dark:text-zinc-700" target="_blank">
             shahfahidbaloch@gmail.com
           </Link>
         </div>
-        <div className="app__footer-card">
+        <div className="app__footer-card  dark:text-zinc-700">
           <Image src={images.mobile} alt="phone" />
           <Link href="tel:+923368558700" target="_blank">+923368558700</Link>
         </div>

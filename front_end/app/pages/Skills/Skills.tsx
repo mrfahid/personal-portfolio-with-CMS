@@ -30,10 +30,10 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="head-text dark:text-white">Skills & Experiences</h2>
+      <h2 className="head-text dark:text-zinc-300">Skills & Experiences</h2>
 
       <div className="app__skills-container">
-        <motion.div className="app__skills-list">
+        <motion.div className="app__skills-list dark:text-zinc-300">
           {skills.map((skill) => (
             <motion.div
               key={skill.name}
@@ -41,7 +41,7 @@ const Skills = () => {
               transition={{ duration: 0.5 }}
               className="app__skills-item app__flex"
             >
-              <div className="app__flex">
+              <div className="app__flex cursor-pointer">
                 <Image
                   src={urlFor(skill.icon)} // Updated here
                   alt={skill.name}
@@ -60,7 +60,7 @@ const Skills = () => {
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
               </div>
-              <motion.div className="app__skills-exp-work">
+              <motion.div className="app__skills-exp-work dark:text-zinc-300">
                 {experience.works.map((work) => (
                   <div key={work.name}>
                     <motion.div
@@ -70,8 +70,8 @@ const Skills = () => {
                       data-tooltip-id={work.name}
                       data-tooltip-content={work.desc}
                     >
-                      <h4 className="bold-text">{work.name}</h4>
-                      <p className="p-text">{work.company}</p>
+                      <h4 className="bold-text dark:text-zinc-300">{work.name}</h4>
+                      <p className="p-text dark:text-zinc-300">{work.company}</p>
                       <p>{work.desc}</p>
                     </motion.div>
                     <Tooltip

@@ -19,26 +19,27 @@ const Navbar = () => {
           Shah <span>Fahid</span>
         </h2>
       </div>
-      <ul className="app__navbar-links dark:text-gray-800">
+      <ul className="app__navbar-links">
         {navItems.map((item) => (
-          <li key={item} className="app__flex p-text">
+          <li key={item} className="app__flex p-text  dark:text-zinc-500">
             <div />
             <a href={`#${item}`}>{item}</a>
           </li>
         ))}
-        <li key="blog" className="app__flex p-text">
+        <li key="blog" className="app__flex p-text  dark:text-zinc-5
+        00">
           <div />
           <Link
             href={`https://fahid-blogs.vercel.app/`}
             target="_blank"
-            className="dark:text-gray-800 text-center font-bold"
+            className="dark:text-zinc-500 text-center font-bold"
           >
             Blog
           </Link>
         </li>
       </ul>
 
-      <div className="app__navbar-menu dark:text-gray-800">
+      <div className="app__navbar-menu">
         {!toggle && <HiMenuAlt4 onClick={() => setToggle(true)} />}
         {toggle && (
           <motion.div
@@ -46,7 +47,7 @@ const Navbar = () => {
             transition={{ duration: 0.85, ease: "easeOut" }}
           >
             <HiX onClick={() => setToggle(false)} />
-            <ul className="dark:text-gray-800">
+            <ul className="dark:text-zinc-500">
               {navItems.map((item) => (
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setToggle(false)}>
@@ -54,7 +55,7 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <li key="blog" className="app__flex p-text">
+              <li key="blog" className="app__flex p-text  dark:text-zinc-500">
                 <div />
                 <Link
                   href={`https://fahid-blogs.vercel.app/`}
