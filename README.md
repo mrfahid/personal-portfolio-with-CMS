@@ -44,17 +44,18 @@ To run this project locally, follow these steps:
 
 ## Navigate to the project directory:
 
-```
+```bash
 cd personal-portfolio-with-CMS/front_end
 ```
 
 Install dependencies:
-```
+```bash
 npm install
 ```
 
+
 ## Run the development server:
-```
+```bash
 npm run dev
 ```
 
@@ -63,9 +64,9 @@ The application should now be running on http://localhost:3000
 Contact
 For any inquiries or feedback, feel free to reach out to me via:
 
- [GitHub: ](https://github.com/mrfahid)
- [LinkedIn: ] (Shah Fahid)
- [TikTok: ] (techdevhub)
+ [GitHub](https://github.com/mrfahid)
+ [LinkedIn] (Shah Fahid)
+ [TikTok] (techdevhub)
 
 
 License
