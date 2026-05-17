@@ -44,10 +44,12 @@ const Header = () => (
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
     >
-      <Image 
-       src={images.logo4}
-       alt="profile_bg2" 
-       layout="responsive"
+      <Image
+       src={images.logo}
+       alt="profile_bg2"
+       fill
+       sizes="(max-width: 600px) 100vw, (max-width: 1200px) 100vw, 40vw"
+       style={{ objectFit: 'contain', objectPosition: 'bottom center' }}
        priority
        className="image-profile"
        />
@@ -56,11 +58,12 @@ const Header = () => (
         transition={{ duration: 1, ease: 'easeInOut' }}
         className="overlay_circle"
       > 
-      <Image 
-      src={images.circle} 
-      className="animatedCircle w-[300px] h-[500px] md:w-[500px] md:h-[500px" 
-      alt="profile_circle" 
-      layout="responsive"
+      <Image
+      src={images.circle}
+      className="animatedCircle"
+      alt="profile_circle"
+      width={500}
+      height={500}
       priority
       />
       </motion.div>
@@ -71,7 +74,7 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[images.react, images.redux, images.sass].map((circle, index) => (
+      {[images.nodejs, images.nextjs, images.mongodb].map((circle, index) => (
         <div className="circles-cmp app__flex" key={`circle-${index}`}>
           <Image src={circle} alt="profile" />
         </div>

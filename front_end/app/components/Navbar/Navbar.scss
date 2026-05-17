@@ -104,12 +104,12 @@
     cursor: pointer;
   }
 
-  div {
+  > div {
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: -9; // This should be lower than the svg icon
+    z-index: 5;
 
     padding: 1rem;
     width: 80%;
@@ -128,12 +128,9 @@
       width: 35px;
       cursor: pointer;
       height: 35px;
-      // position: absolute;
-      // left: -5;
-      // // top: 0;
       color: var(--secondary-color);
       margin: 0.5rem 1rem;
-      z-index: 11; // Ensure this has the highest z-index
+      z-index: 11;
     }
 
     ul {

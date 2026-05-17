@@ -17,13 +17,18 @@ import about04 from "../assets/about04.png";
 import circle from "../assets/circle.svg";
 import chatbot from "../assets/chat-bot.webp";
 
+import logo from "../assets/logo.png";
 import logo4 from "../assets/logo4.png";
+
+import nodejs from "../assets/node-js.png";
+import nextjs from "../assets/next-js.png";
+import mongodb from "../assets/mongoDB.png";
 
 
 export default {
   email,
   mobile,
-   chatbot,
+  chatbot,
 
   css,
 
@@ -43,6 +48,10 @@ export default {
 
   circle,
 
+  logo,
+  logo4,
 
- logo4,
+  nodejs,
+  nextjs,
+  mongodb,
 };
